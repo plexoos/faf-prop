@@ -1,0 +1,277 @@
+set(pkginclude_HEADERS
+  BeamLineMagnetSubsystem.h
+  ePHENIXRICHConstruction.h
+  PHG4BbcSubsystem.h
+  PHG4BlockCellGeom.h
+  PHG4BlockCellGeomContainer.h
+  PHG4BlockGeom.h
+  PHG4BlockGeomContainer.h
+  PHG4BlockSubsystem.h
+  PHG4Cell.h
+  PHG4Cellv1.h
+  PHG4CellContainer.h
+  PHG4CellDefs.h
+  PHG4EventActionClearZeroEdep.h
+  PHG4ConeSubsystem.h
+  PHG4CrystalCalorimeterSubsystem.h
+  PHG4CylinderCell.h
+  PHG4CylinderCellv1.h
+  PHG4CylinderCellv2.h
+  PHG4CylinderCellv3.h
+  PHG4CylinderCellContainer.h
+  PHG4CylinderGeom.h
+  PHG4CylinderGeomv1.h
+  PHG4CylinderGeomv2.h
+  PHG4CylinderGeomv3.h
+  PHG4CylinderGeomv4.h
+  PHG4CylinderGeom_Spacalv1.h
+  PHG4CylinderGeom_Spacalv2.h
+  PHG4CylinderGeom_Spacalv3.h
+  PHG4CylinderGeomContainer.h
+  PHG4CylinderCellDefs.h
+  PHG4CylinderCellGeom.h
+  PHG4CylinderCellGeom_Spacalv1.h
+  PHG4CylinderCellGeomContainer.h
+  PHG4CylinderCellReco.h
+  PHG4CylinderSubsystem.h
+  PHG4DetectorSubsystem.h
+  PHG4DetectorGroupSubsystem.h
+  PHG4ForwardCalCellReco.h
+  PHG4ForwardEcalSubsystem.h
+  PHG4ForwardHcalSubsystem.h
+  PHG4FullProjSpacalCellReco.h
+  PHG4GDMLSubsystem.h
+  PHG4HcalDefs.h
+  PHG4HcalCellReco.h
+  PHG4HcalSubsystem.h
+  PHG4InnerHcalSubsystem.h
+  PHG4OuterHcalSubsystem.h
+  PHG4PSTOFSubsystem.h
+  PHG4RICHSubsystem.h
+  PHG4mRICHSubsystem.h
+  PHG4ScintillatorSlat.h
+  PHG4ScintillatorSlatv1.h
+  PHG4ScintillatorSlatContainer.h
+  PHG4ScintillatorSlatDefs.h
+  PHG4SectorConstructor.h
+  PHG4SectorSubsystem.h
+  PHG4SpacalSubsystem.h
+  PHG4StepStatusDecode.h
+)
+
+set(libg4detectors_io_la_SOURCES
+  g4detectors_io_Dict.cxx
+  PHG4BlockCellGeom.cc
+  PHG4BlockCellGeomContainer.cc
+  PHG4BlockGeom.cc
+  PHG4BlockGeomv1.cc
+  PHG4BlockGeomContainer.cc
+  PHG4Cell.cc
+  PHG4Cellv1.cc
+  PHG4CellContainer.cc
+  PHG4CellDefs.cc
+  PHG4CylinderGeom.cc
+  PHG4CylinderGeomv1.cc
+  PHG4CylinderGeomv2.cc
+  PHG4CylinderGeomv3.cc
+  PHG4CylinderGeomv4.cc
+  PHG4CylinderGeom_Spacalv1.cc
+  PHG4CylinderGeom_Spacalv2.cc
+  PHG4CylinderGeom_Spacalv3.cc
+  PHG4CylinderGeomContainer.cc
+  PHG4CylinderCellv1.cc
+  PHG4CylinderCellv2.cc
+  PHG4CylinderCellv3.cc
+  PHG4CylinderCellContainer.cc
+  PHG4CylinderCellGeom.cc
+  PHG4CylinderCellGeom_Spacalv1.cc
+  PHG4CylinderCellGeomContainer.cc
+  PHG4ScintillatorSlatDefs.cc
+  PHG4ScintillatorSlatv1.cc
+  PHG4ScintillatorSlatContainer.cc
+)
+
+set(libg4detectors_la_SOURCES
+  BeamLineMagnetDetector.cc
+  BeamLineMagnetDisplayAction.cc
+  BeamLineMagnetSubsystem.cc
+  BeamLineMagnetSteppingAction.cc
+  PHG4GDMLDetector.cc
+  PHG4GDMLSubsystem.cc
+  PHG4BbcDetector.cc
+  PHG4BbcSteppingAction.cc
+  PHG4BbcSubsystem.cc
+  PHG4BeamlineMagnetDetector.cc
+  PHG4BeamlineMagnetSubsystem.cc
+  PHG4BlockCellReco.cc
+  PHG4BlockDetector.cc
+  PHG4BlockDisplayAction.cc
+  PHG4BlockSteppingAction.cc
+  PHG4BlockSubsystem.cc
+  PHG4CEmcTestBeamDetector.cc
+  PHG4CEmcTestBeamSteppingAction.cc
+  PHG4CEmcTestBeamSubsystem.cc
+  PHG4ConeDetector.cc
+  PHG4ConeDisplayAction.cc
+  PHG4ConeSteppingAction.cc
+  PHG4ConeSubsystem.cc
+  PHG4CrystalCalorimeterDetector.cc
+  PHG4CrystalCalorimeterDisplayAction.cc
+  PHG4CrystalCalorimeterSteppingAction.cc
+  PHG4CrystalCalorimeterSubsystem.cc
+  PHG4CylinderDetector.cc
+  PHG4CylinderDisplayAction.cc
+  PHG4CylinderSubsystem.cc
+  PHG4CylinderCellReco.cc
+  PHG4CylinderSteppingAction.cc
+  PHG4DetectorGroupSubsystem.cc
+  PHG4DetectorSubsystem.cc
+  PHG4EnvelopeDetector.cc
+  PHG4EnvelopeSteppingAction.cc
+  PHG4EnvelopeSubsystem.cc
+  PHG4EventActionClearZeroEdep.cc
+  PHG4FCalDetector.cc
+  PHG4FCalSteppingAction.cc
+  PHG4FCalSubsystem.cc
+  PHG4ForwardEcalDetector.cc
+  PHG4ForwardEcalDisplayAction.cc
+  PHG4EICForwardEcalDetector.cc
+  PHG4ForwardEcalSteppingAction.cc
+  PHG4ForwardEcalSubsystem.cc
+  PHG4ForwardHcalDetector.cc
+  PHG4ForwardHcalDisplayAction.cc
+  PHG4ForwardHcalSteppingAction.cc
+  PHG4ForwardHcalSubsystem.cc
+  PHG4ForwardCalCellReco.cc
+  PHG4FPbScDetector.cc
+  PHG4FPbScSteppingAction.cc
+  PHG4FPbScRegionSteppingAction.cc
+  PHG4FPbScSubsystem.cc
+  PHG4GenHit.cc
+  PHG4HcalCellReco.cc
+  PHG4HcalDetector.cc
+  PHG4HcalSteppingAction.cc
+  PHG4HcalSubsystem.cc
+  PHG4InnerHcalDetector.cc
+  PHG4InnerHcalDisplayAction.cc
+  PHG4InnerHcalSteppingAction.cc
+  PHG4InnerHcalSubsystem.cc
+  PHG4OuterHcalDetector.cc
+  PHG4OuterHcalDisplayAction.cc
+  PHG4OuterHcalField.cc
+  PHG4OuterHcalFieldSetup.cc
+  PHG4OuterHcalSteppingAction.cc
+  PHG4OuterHcalSubsystem.cc
+  PHG4ProjCrystalCalorimeterDetector.cc
+  PHG4RICHDetector.cc
+  PHG4RICHDisplayAction.cc
+  PHG4RICHSteppingAction.cc
+  PHG4RICHSubsystem.cc
+  ePHENIXRICHConstruction.cc
+  PHG4SectorConstructor.cc
+  PHG4SectorDetector.cc
+  PHG4SectorDisplayAction.cc
+  PHG4SectorSteppingAction.cc
+  PHG4SectorSubsystem.cc
+  PHG4StepStatusDecode.cc
+  PHG4TrackStatusDecode.cc
+  PHG4PSTOFDetector.cc
+  PHG4PSTOFSteppingAction.cc
+  PHG4PSTOFSubsystem.cc
+  PHG4SpacalDetector.cc
+  PHG4SpacalDisplayAction.cc
+  PHG4FullProjSpacalDetector.cc
+  PHG4FullProjTiltedSpacalDetector.cc
+  PHG4FullProjSpacalCellReco.cc
+  PHG4SpacalSteppingAction.cc
+  PHG4SpacalSubsystem.cc
+  PHG4mRICHDetector.cc
+  PHG4mRICHSteppingAction.cc
+  PHG4mRICHSubsystem.cc
+)
+
+root_generate_dictionary(
+  g4detectors_io_Dict
+  PHG4BlockCellGeom.h
+  PHG4BlockCellGeomContainer.h
+  PHG4BlockGeom.h
+  PHG4BlockGeomContainer.h
+  PHG4BlockGeomv1.h
+  PHG4Cell.h
+  PHG4Cellv1.h
+  PHG4CellContainer.h
+  PHG4CylinderGeom.h
+  PHG4CylinderGeomv1.h
+  PHG4CylinderGeomv2.h
+  PHG4CylinderGeomv3.h
+  PHG4CylinderGeomv4.h
+  PHG4CylinderGeom_Spacalv1.h
+  PHG4CylinderGeom_Spacalv2.h
+  PHG4CylinderGeom_Spacalv3.h
+  PHG4CylinderGeomContainer.h
+  PHG4CylinderCell.h
+  PHG4CylinderCellv1.h
+  PHG4CylinderCellv2.h
+  PHG4CylinderCellv3.h
+  PHG4CylinderCellContainer.h
+  PHG4CylinderCellGeom.h
+  PHG4CylinderCellGeom_Spacalv1.h
+  PHG4CylinderCellGeomContainer.h
+  PHG4ScintillatorSlat.h
+  PHG4ScintillatorSlatv1.h
+  PHG4ScintillatorSlatContainer.h
+  MODULE g4detectors_io
+  LINKDEF LinkDef.h
+  OPTIONS -I${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+add_library(g4detectors_io ${libg4detectors_io_la_SOURCES})
+add_library(g4detectors ${libg4detectors_la_SOURCES})
+
+set_target_properties(g4detectors_io PROPERTIES SOVERSION 0)
+set_target_properties(g4detectors PROPERTIES SOVERSION 0)
+
+target_include_directories(g4detectors_io
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/offline/framework
+    ${CMAKE_SOURCE_DIR}/offline/database
+    ${CMAKE_SOURCE_DIR}/simulation/g4simulation
+    ${Geant4_INCLUDE_DIR}/../
+    ${ROOT_INCLUDE_DIRS}
+)
+
+target_include_directories(g4detectors
+    PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/offline/framework
+    ${CMAKE_SOURCE_DIR}/offline/database
+    ${CMAKE_SOURCE_DIR}/simulation/g4simulation
+    ${CGAL_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
+    ${ROOT_INCLUDE_DIRS}
+)
+
+target_link_libraries(g4detectors_io
+    -L$ENV{OFFLINE_MAIN}/lib
+    phool
+    phparameter
+)
+
+target_link_libraries(g4detectors
+    g4detectors_io
+    g4testbench
+    -L$ENV{OFFLINE_MAIN}/lib
+    phg4gdml
+    phool
+    CGAL
+    SubsysReco
+)
+
+install(TARGETS g4detectors_io g4detectors)
+install(FILES ${pkginclude_HEADERS} DESTINATION "include/g4detectors/")
+install(FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/libg4detectors_io_rdict.pcm
+    ${CMAKE_CURRENT_BINARY_DIR}/libg4detectors_io.rootmap
+    DESTINATION "lib/"
+)
