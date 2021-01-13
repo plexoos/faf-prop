@@ -37,3 +37,5 @@ add_subdirectory(simulation/g4simulation/g4micromegas)
 add_subdirectory(simulation/g4simulation/g4mvtx)
 add_subdirectory(simulation/g4simulation/g4tpc)
 add_subdirectory(simulation/g4simulation/g4vertex)
+
+add_subdirectory(test)
