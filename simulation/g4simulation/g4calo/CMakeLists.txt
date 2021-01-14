@@ -36,9 +36,9 @@ target_link_libraries(g4calo
     phool
     SubsysReco
     phparameter
-    gsl
-    gslcblas
     calo_io
+    ${GSL_CBLAS_LIBRARY}
+    ${GSL_LIBRARY}
 )
 
 install(TARGETS g4calo)
