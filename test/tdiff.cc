@@ -6,6 +6,8 @@
 #include "TTree.h"
 
 #include "g4main/PHG4TruthInfoContainer.h"
+#include "g4main/PHG4Particle.h"
+#include "g4main/PHG4Shower.h"
 
 
 struct ParsedArgs
@@ -26,8 +28,15 @@ struct RootInput
 struct DiffCount
 {
   int particles, vertices, showers;
+  int particles1, vertices1, showers1;
+  int particles2, vertices2, showers2;
   operator bool() const { return particles > 0 || vertices > 0 || showers > 0; }
-  friend std::ostream& operator<<(std::ostream& os, const DiffCount& d) { return os << d.particles << ' ' << d.vertices << ' ' << d.showers; }
+  friend std::ostream& operator<<(std::ostream& os, const DiffCount& d)
+  {
+    return os << d.particles  << ' ' << d.vertices  << ' ' << d.showers << '\n'
+              << d.particles1 << ' ' << d.vertices1 << ' ' << d.showers1 << '\n'
+              << d.particles2 << ' ' << d.vertices2 << ' ' << d.showers2;
+  }
 };
 
 
@@ -85,7 +94,7 @@ int main(int argc, char **argv)
   }
 
   if (diff) {
-    std::cout << "diff: " << diff << '\n';
+    std::cout << "diff: " << irecord << ": " << diff << '\n';
     return irecord;
   }
 
@@ -165,8 +174,16 @@ DiffCount Diff(const PHG4TruthInfoContainer& c1, const PHG4TruthInfoContainer& c
 
   DiffCount diff{};
 
+  diff.particles1 = c1.GetMap().size();
+  diff.particles2 = c2.GetMap().size();
   count_mismatches(c1.GetMap(), c2.GetMap(), diff.particles);
+
+  diff.vertices1 = c1.GetVtxMap().size();
+  diff.vertices2 = c2.GetVtxMap().size();
   count_mismatches(c1.GetVtxMap(), c2.GetVtxMap(), diff.vertices);
+
+  diff.showers1 = c1.GetShowerMap().size();
+  diff.showers2 = c2.GetShowerMap().size();
   count_mismatches(c1.GetShowerMap(), c2.GetShowerMap(), diff.showers);
 
   return diff;
