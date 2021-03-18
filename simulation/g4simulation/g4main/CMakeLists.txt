@@ -171,8 +171,9 @@ target_include_directories(g4testbench
 target_link_libraries(g4testbench phg4hit
     ${Boost_FILESYSTEM_LIBRARY}
     ${Geant4_LIBRARIES}
+    fun4all
     -L$ENV{OFFLINE_MAIN}/lib
-    EICPhysicsList eicsmear fun4all g4decayer gsl gslcblas HepMC phfield phgeom
+    EICPhysicsList eicsmear g4decayer gsl gslcblas HepMC phfield phgeom
     phg4gdml phhepmc phparameter vararray
 )
 

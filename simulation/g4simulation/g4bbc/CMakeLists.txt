@@ -56,7 +56,6 @@ target_link_libraries(g4bbc_io
 target_link_libraries(g4bbc
     g4bbc_io
     g4detectors
-    -L$ENV{OFFLINE_MAIN}/lib
     fun4all
 )
 

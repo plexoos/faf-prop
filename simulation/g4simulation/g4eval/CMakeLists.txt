@@ -63,8 +63,8 @@ target_link_libraries(g4eval
     phg4hit
     g4detectors
     intt_io
-    -L$ENV{OFFLINE_MAIN}/lib
     fun4all
+    -L$ENV{OFFLINE_MAIN}/lib
     track_io
     mvtx_io
     calo_io

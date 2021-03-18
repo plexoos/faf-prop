@@ -27,7 +27,6 @@ target_include_directories(g4gdml
 )
 
 target_link_libraries(g4gdml
-    -L$ENV{OFFLINE_MAIN}/lib
     phool
     SubsysReco
     fun4all

@@ -36,8 +36,8 @@ target_include_directories(g4mvtx
 target_link_libraries(g4mvtx
     phg4hit
     g4detectors
-    -L$ENV{OFFLINE_MAIN}/lib
     fun4all 
+    -L$ENV{OFFLINE_MAIN}/lib
     track_io 
     mvtx_io
 )

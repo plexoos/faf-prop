@@ -31,10 +31,10 @@ target_link_libraries(g4calo
     g4detectors_io
     g4testbench
     phg4hit
-    -L$ENV{OFFLINE_MAIN}/lib
     fun4all
     phool
     SubsysReco
+    -L$ENV{OFFLINE_MAIN}/lib
     phparameter
     calo_io
     ${GSL_CBLAS_LIBRARY}

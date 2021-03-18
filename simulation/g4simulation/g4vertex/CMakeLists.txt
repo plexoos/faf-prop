@@ -55,8 +55,8 @@ target_link_libraries(g4vertex
     g4detectors
     g4vertex_io
     g4bbc_io
-    -L$ENV{OFFLINE_MAIN}/lib
     fun4all
+    -L$ENV{OFFLINE_MAIN}/lib
     trackbase_historic_io
 )
 
