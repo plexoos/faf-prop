@@ -19,9 +19,12 @@ find_package(Rave REQUIRED)
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
+add_subdirectory(offline/framework/ffaobjects)
+add_subdirectory(offline/framework/frog)
 add_subdirectory(offline/framework/fun4all)
 add_subdirectory(offline/framework/phool)
 add_subdirectory(offline/framework/phoolraw)
+add_subdirectory(offline/packages/tpc)
 add_subdirectory(offline/packages/trackreco)
 
 add_subdirectory(simulation/g4simulation/g4bbc)
