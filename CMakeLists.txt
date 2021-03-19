@@ -15,6 +15,7 @@ find_package(CGAL REQUIRED)
 find_package(GSL REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(Rave REQUIRED)
+find_package(eicsmear REQUIRED)
 
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
