@@ -160,21 +160,39 @@ target_include_directories(phg4hit
 
 target_include_directories(g4testbench
     PRIVATE
+    ${CMAKE_SOURCE_DIR}/offline/database
     ${CMAKE_SOURCE_DIR}/offline/framework
+    ${CMAKE_SOURCE_DIR}/offline/packages
     ${CMAKE_SOURCE_DIR}/generators
-    ${ROOT_INCLUDE_DIRS}
-    $ENV{OFFLINE_MAIN}/include
-    $ENV{OFFLINE_MAIN}/include/eigen3
-    $ENV{G4_MAIN}/include
+    ${CMAKE_SOURCE_DIR}/simulation/g4simulation
+    ${GSL_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
+    ${EIGEN3_INCLUDE_DIR}/eigen3
+    ${Geant4_INCLUDE_DIRS}
 )
 
-target_link_libraries(g4testbench phg4hit
+target_link_libraries(g4testbench
     ${Boost_FILESYSTEM_LIBRARY}
     ${Geant4_LIBRARIES}
+    eicsmear::eicsmear
+    phg4hit
     fun4all
+    g4decayer
     -L$ENV{OFFLINE_MAIN}/lib
-    EICPhysicsList eicsmear g4decayer gsl gslcblas HepMC phfield phgeom
-    phg4gdml phhepmc phparameter vararray
+    EICPhysicsList
+    ${GSL_LIBRARY}
+    ${GSL_CBLAS_LIBRARY}
+    HepMC
+    phfield
+    phgeom
+    phg4gdml
+    phhepmc
+    phparameter
+    vararray
+)
+
+target_link_libraries(phg4hit
+    phool
 )
 
 install(TARGETS phg4hit g4testbench)

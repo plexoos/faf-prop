@@ -44,22 +44,19 @@ set_target_properties(TDirectoryHelper PROPERTIES SOVERSION 0)
 target_include_directories(fun4all
     PRIVATE
     ${CMAKE_SOURCE_DIR}/offline/framework
-    ${ROOT_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
 )
 
-target_include_directories(TDirectoryHelper
-    PRIVATE
-    ${ROOT_INCLUDE_DIRS}
+target_link_libraries(TDirectoryHelper
+    ROOT::Core
 )
 
 target_link_libraries(fun4all
-    ${ROOT_LIBRARIES}
+    ROOT::Core
     SubsysReco
     TDirectoryHelper
-    boost_filesystem
+    ${Boost_FILESYSTEM_LIBRARY}
     phool
-    -L$ENV{OFFLINE_MAIN}/lib
     FROG
     ffaobjects
 )

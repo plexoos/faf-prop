@@ -63,12 +63,11 @@ target_include_directories(phool
     PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_SOURCE_DIR}/offline/framework
-    ${ROOT_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
 )
 
 target_link_libraries(phool
-    ${ROOT_LIBRARIES}
+    ROOT::Core
 )
 
 install(TARGETS phool)

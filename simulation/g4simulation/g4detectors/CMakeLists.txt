@@ -253,19 +253,18 @@ target_include_directories(g4detectors
 )
 
 target_link_libraries(g4detectors_io
-    -L$ENV{OFFLINE_MAIN}/lib
     phool
+    -L$ENV{OFFLINE_MAIN}/lib
     phparameter
 )
 
 target_link_libraries(g4detectors
     g4detectors_io
     g4testbench
-    -L$ENV{OFFLINE_MAIN}/lib
-    phg4gdml
     phool
-    CGAL
     SubsysReco
+    phg4gdml
+    CGAL
 )
 
 install(TARGETS g4detectors_io g4detectors)
